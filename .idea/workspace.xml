@@ -3,54 +3,42 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BeansView">
+    <option name="showSidePanel" value="false" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fcd55896-ab37-485f-89b8-7f1247f5c0a5" name="Changes" comment="Primer commit del proyecto java con spring boot usando una CRUD sencillo, donde se usa, un GET, POST y DELETE.">
-      <change afterPath="$PROJECT_DIR$/../../../.vscode/Prácticas VStudio Code/Java/project/springboot/.idea/springboot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Fifopp/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Fifopp/.idea/ant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Fifopp/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Fifopp/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Fifopp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Fifopp/Fifopp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Inicio/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Inicio/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Inicio/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Inicio/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Inicio/Inicio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java Fundamentos/Inicio/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/.idea/Curso-Spring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/src/main/java/CursoSpring/demo/CursoSpringApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/src/main/java/CursoSpring/demo/controllers/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/src/main/java/CursoSpring/demo/model/UsuarioModels.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/src/main/java/CursoSpring/demo/repository/UsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/src/main/java/CursoSpring/demo/services/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Curso-Spring/demo/src/test/java/CursoSpring/demo/CursoSpringApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../proyecto/.idea/proyecto.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/springboot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/next.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/login/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/products/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/app/signup/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/components/login-page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/components/product-managment.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/components/signup-page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/services/AuthService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../proyecto/.idea/proyecto.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../proyecto/proyecto/src/main/java/com/proyecto/proyecto/Dao/UsuarioDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../proyecto/proyecto/src/main/java/com/proyecto/proyecto/Dao/UsuarioDaoImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../proyecto/proyecto/src/main/java/com/proyecto/proyecto/Models/Usuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../proyecto/proyecto/src/main/java/com/proyecto/proyecto/controllers/UsuarioController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../NetBeansProjects/Farmacia/src/Views/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../NetBeansProjects/Farmacia/src/Views/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../NetBeansProjects/Farmacia/src/Views/SystemView.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../../NetBeansProjects/Farmacia/src/Views/SystemView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../NetBeansProjects/Farmacia/src/Views/SystemView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../NetBeansProjects/Farmacia/src/Views/SystemView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../NetBeansProjects/Farmacia/src/views/LoginView.form" beforeDir="false" afterPath="$PROJECT_DIR$/../../../NetBeansProjects/Farmacia/src/views/LoginView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/QuikByte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/src/main/java/com/example/QuickBite/QuickBiteApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/src/main/java/com/example/QuickBite/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/src/main/java/com/example/QuickBite/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/src/main/java/com/example/QuickBite/model/ProductModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/src/main/java/com/example/QuickBite/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/src/main/java/com/example/QuickBite/services/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBite/src/test/java/com/example/QuickBite/QuickBiteApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,22 +46,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "LopezS21"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LopezS21&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/LopezS21/QuickBite.git",
+    "accountId": "e5196783-d3bb-410f-855b-baaca8779ab1"
   }
 }]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="31a1e38b-c811-4c49-8e5e-6c3d2806e498" />
-        <option name="url" value="https://github.com/LopezS21/QuikByte.git" />
-      </UrlAndAccount>
-    </option>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -82,20 +75,49 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2XPPCqiGfbkO9dnk5GJIlI5Lymw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/samir/Documentos/IdeaProjects/Proyectos Spring/QuickBite&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "HTTP Request.All in QuickBite-endpoints_1.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.QuickBiteApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/samir/Documents/Desarrollo/Java/Unidad de USB/Java/Proyectos Spring/API's Spring/QuickBite",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.QuickBiteApplication">
+    <configuration name="All in QuickBite-endpoints_1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/QuickBite-endpoints_1.http">
+      <method v="2" />
+    </configuration>
     <configuration name="All in QuickBite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuickBite" />
       <option name="PACKAGE_NAME" value="" />
@@ -104,11 +126,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QuickBiteApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="QuickBite" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.QuickBite.QuickBiteApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.All in QuickBite-endpoints_1" />
         <item itemvalue="JUnit.All in QuickBite" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -118,6 +156,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698527616681</updated>
+      <workItem from="1729801001770" duration="2920000" />
+      <workItem from="1729880806618" duration="2986000" />
+      <workItem from="1731135232812" duration="117000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit del proyecto java con spring boot usando una CRUD sencillo, donde se usa, un GET, POST y DELETE.">
       <option name="closed" value="true" />
@@ -129,6 +170,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit del proyecto java con spring boot usando una CRUD sencillo, donde se usa, un GET, POST y DELETE." />

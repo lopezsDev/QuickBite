@@ -1,0 +1,84 @@
+DELETE http://localhost:8080/api/products/1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-24T145530.200.txt
+
+###
+
+DELETE http://localhost:8080/api/products/0
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-24T145511.200.txt
+
+###
+
+POST http://localhost:8080/api/products/add
+Content-Type: application/json
+Content-Length: 85
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 0,
+  "name": "Arroz",
+  "description": "Arroz precocido",
+  "price": 1050
+}
+
+<> 2024-10-24T145353.200.json
+
+###
+
+GET http://localhost:8080/api/products/allproducts
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-24T142643.200.json
+
+###
+
+POST http://localhost:8080/api/products/add
+Content-Type: application/json
+Content-Length: 82
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 0,
+  "name": "Arroz",
+  "description": "Arroz blanco",
+  "price": 2500
+}
+
+<> 2024-10-24T142614-1.200.json
+
+###
+
+POST http://localhost:8080/api/products/add
+Content-Type: application/json
+Content-Length: 62
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": 0,
+  "name": "",
+  "description": "",
+  "price": 0
+}
+
+<> 2024-10-24T142614.200.json
+
+###
+
