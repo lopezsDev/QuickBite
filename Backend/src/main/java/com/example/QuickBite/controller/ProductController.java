@@ -2,10 +2,13 @@ package com.example.QuickBite.controller;
 
 import com.example.QuickBite.model.ProductModel;
 import com.example.QuickBite.services.ProductService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -25,13 +28,23 @@ public class ProductController {
      * @return Lista de productos.
      */
     @GetMapping("/allproducts")
-    public ArrayList<ProductModel> listAllProducts() {
-        return productService.listAllProducts();
+    public ResponseEntity<?> listAllProducts() {
+        List<ProductModel> products = productService.listAllProducts();
+        if (products.isEmpty()) {
+            return ResponseEntity.ok("No hay productos registrados");
+        }
+        return ResponseEntity.ok(products);
     }
 
+
     @GetMapping("/{id}")
-    public Optional<ProductModel> getProductById(@PathVariable("id") Long id) {
-        return productService.getProduct(id);
+    public ResponseEntity<?> getProductById(@PathVariable("id") Long id) {
+        Optional<ProductModel> product = productService.getProduct(id);
+        if (product.isPresent()) {
+            return ResponseEntity.ok(product.get());
+        }else {
+            return ResponseEntity.ok("No existe el producto con el id " + id)   ;
+        }
     }
 
     @PutMapping("/{id}")
@@ -51,13 +64,13 @@ public class ProductController {
      * @return El producto agregado.
      */
     @PostMapping("/add")
-    public ProductModel addProduct(@RequestBody ProductModel product, @RequestHeader("Authorization") String authorizationHeader) {
-        System.out.println("////////////////////////////////////////////////////////");
-        System.out.println("////////////////////////////////////////////////////////");
-        System.out.println("Authorization header: " + authorizationHeader);
-        System.out.println("////////////////////////////////////////////////////////");
-        System.out.println("////////////////////////////////////////////////////////");
-        return this.productService.addProduct(product);
+    public ResponseEntity<ProductModel> addProduct(@Valid @RequestBody ProductModel product, @RequestHeader("Authorization") String authorizationHeader) {
+        try {
+            ProductModel savedProduct = this.productService.addProduct(product);
+            return ResponseEntity.ok(savedProduct);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(null);
+        }
     }
 
     /**

@@ -13,7 +13,7 @@ export const register = async (userData: {
         // Limpia cualquier token existente en localStorage antes de guardar el nuevo
         localStorage.removeItem('token')
         localStorage.setItem('token', response.data.token)
-        console.log("Nuevo token almacenado en register:", response.data.token) // Verificar que se guarda el nuevo token
+       // console.log("Nuevo token almacenado en register:", response.data.token) // Verificar que se guarda el nuevo token
 
         return response.data
     } catch (error) {
@@ -27,12 +27,12 @@ export const authenticate = async (credentials: {
     password: string;
 }) => {
     try {
-        const response = await axios.post('/api/auth/authenticate', credentials)
+        const response = await axios.post('/api/auth/login', credentials)
 
         // Limpia cualquier token existente en localStorage antes de guardar el nuevo
         localStorage.removeItem('token')
         localStorage.setItem('token', response.data.token)
-        console.log("Nuevo token almacenado:", response.data.token) // Verificar que se guarda el nuevo token
+       // console.log("Nuevo token almacenado:", response.data.token) // Verificar que se guarda el nuevo token
 
         return response.data
     } catch (error) {

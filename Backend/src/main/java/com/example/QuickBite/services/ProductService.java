@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -31,8 +32,8 @@ public class ProductService {
      * un ArrayList de ProductModel.
      */
 
-    public ArrayList<ProductModel> listAllProducts() {
-        return (ArrayList<ProductModel>) productRepository.findAll();
+    public List<ProductModel> listAllProducts() {
+        return productRepository.findAll();
     }
 
     public ProductModel updateProduct(Long id, ProductModel productModel) {
@@ -54,10 +55,10 @@ public class ProductService {
     }
 
     public boolean deleteProduct(Long id) {
-        try {
+        if (productRepository.existsById(id)) {
             productRepository.deleteById(id);
             return true;
-        } catch (Exception err) {
+        }else{
             return false;
         }
     }

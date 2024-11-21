@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import Alert  from "@/components/ui/alert"
 
 type Product = {
   id: string
@@ -20,110 +21,125 @@ export default function ProductManagement() {
   const [newProduct, setNewProduct] = useState<Omit<Product, 'id'>>({ name: '', price: 0, description: '' })
   const [searchId, setSearchId] = useState('')
   const [editProduct, setEditProduct] = useState<Product | null>(null)
+  const [alert, setAlert] = useState<{ show: boolean; type: 'success' | 'error'; message: string }>({
+    show: false,
+    type: 'success',
+    message: ''
+  })
+
+  const showAlert = (type: 'success' | 'error', message: string) => {
+    setAlert({ show: true, type, message })
+    setTimeout(() => {
+      setAlert({ show: false, type: 'success', message: '' })
+    }, 3000)
+  }
 
   const handleCreateProduct = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    // Recupera el token almacenado en localStorage
-    const token = localStorage.getItem('token')
+    e.preventDefault();
+    const token = localStorage.getItem('token');
 
     if (!token) {
-      alert('No estás autenticado. Inicia sesión para continuar.')
-      return
+      showAlert('error', 'No estás autenticado. Inicia sesión para continuar.');
+      return;
     }
 
-    // Llamada al API para crear el producto, incluyendo el token en los headers
+    // Validación de los campos 'name' y 'description'
+    if (!newProduct.name.trim() || !newProduct.description.trim()) {
+      showAlert('error', 'El nombre y la descripción son obligatorios.');
+      return;
+    }
+
     const response = await fetch('/api/products/add', {
       method: 'POST',
       body: JSON.stringify(newProduct),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`  // Añadir el token aquí
+        'Authorization': `Bearer ${token}`
       },
-    })
+    });
 
     if (response.ok) {
-      const createdProduct = await response.json()
-      setProducts([...products, createdProduct])
-      setNewProduct({ name: '', price: 0, description: '' })
+      const createdProduct = await response.json();
+      setProducts([...products, createdProduct]);
+      setNewProduct({ name: '', price: 0, description: '' });
+      showAlert('success', 'Producto creado exitosamente');
     } else {
-      console.error('Error al crear el producto:', response.statusText)
-      alert('No se pudo crear el producto. Verifica tu autenticación.')
+      showAlert('error', 'No se pudo crear el producto. Verifica tu autenticación.');
     }
-  }
+  };
 
 
   const handleSearchProduct = async () => {
-    // Recupera el token almacenado en localStorage
     const token = localStorage.getItem('token')
 
     if (!token) {
-      alert('No estás autenticado. Inicia sesión para continuar.')
+      showAlert('error', 'No estás autenticado. Inicia sesión para continuar.')
       return
     }
 
-    // Llamada al API para buscar el producto por ID, incluyendo el token en los headers
-    const response = await fetch(`/api/products/${searchId}`, {
-      headers: {
-        'Authorization': `Bearer ${token}`, // Añadir el token aquí
-      },
-    })
+    try {
+      const response = await fetch(`/api/products/${searchId}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+      })
 
-    if (response.ok) {
-      const product = await response.json()
-      setProducts([product])
-    } else {
-      console.error('Error al buscar el producto:', response.statusText)
-      alert('No se pudo encontrar el producto. Verifica tu autenticación.')
+      if (response.ok) {
+        const product = await response.json()
+        setProducts([product])
+        showAlert('success', 'Producto encontrado exitosamente')
+      } else {
+        // Manejar errores HTTP (por ejemplo, 404)
+        showAlert('error', 'No se pudo encontrar el producto')
+      }
+    } catch (error) {
+      // Manejar errores de red u otros imprevistos
+      showAlert('error', 'Ocurrió un error al buscar el producto')
+      console.error('Error en handleSearchProduct:', error)
     }
   }
 
 
   const handleListProducts = async () => {
-    // Recupera el token almacenado en localStorage
     const token = localStorage.getItem('token')
 
     if (!token) {
-      alert('No estás autenticado. Inicia sesión para continuar.')
+      showAlert('error', 'No estás autenticado. Inicia sesión para continuar.')
       return
     }
 
-    // Llamada al API para listar todos los productos, incluyendo el token en los headers
     const response = await fetch('/api/products/allproducts', {
       headers: {
-        'Authorization': `Bearer ${token}`, // Añadir el token aquí
+        'Authorization': `Bearer ${token}`,
       },
     })
 
     if (response.ok) {
       const productList = await response.json()
       setProducts(productList)
+      showAlert('success', 'Lista de productos cargada exitosamente')
     } else {
-      console.error('Error al listar los productos:', response.statusText)
-      alert('No se pudo obtener la lista de productos. Verifica tu autenticación.')
+      showAlert('error', 'No se pudo obtener la lista de productos')
     }
   }
-
 
   const handleEditProduct = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!editProduct) return
 
-    // Recupera el token almacenado en localStorage
     const token = localStorage.getItem('token')
 
     if (!token) {
-      alert('No estás autenticado. Inicia sesión para continuar.')
+      showAlert('error', 'No estás autenticado. Inicia sesión para continuar.')
       return
     }
 
-    // Llamada al API para modificar el producto, incluyendo el token en los headers
     const response = await fetch(`/api/products/${editProduct.id}`, {
       method: 'PUT',
       body: JSON.stringify(editProduct),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`, // Añadir el token aquí
+        'Authorization': `Bearer ${token}`,
       },
     })
 
@@ -131,41 +147,44 @@ export default function ProductManagement() {
       const updatedProduct = await response.json()
       setProducts(products.map(p => p.id === updatedProduct.id ? updatedProduct : p))
       setEditProduct(null)
+      showAlert('success', 'Producto actualizado exitosamente')
     } else {
-      console.error('Error al editar el producto:', response.statusText)
-      alert('No se pudo editar el producto. Verifica tu autenticación.')
+      showAlert('error', 'No se pudo actualizar el producto')
     }
   }
 
-
   const handleDeleteProduct = async (id: string) => {
-    // Recupera el token almacenado en localStorage
     const token = localStorage.getItem('token')
 
     if (!token) {
-      alert('No estás autenticado. Inicia sesión para continuar.')
+      showAlert('error', 'No estás autenticado. Inicia sesión para continuar.')
       return
     }
 
-    // Llamada al API para eliminar el producto, incluyendo el token en los headers
     const response = await fetch(`/api/products/${id}`, {
       method: 'DELETE',
       headers: {
-        'Authorization': `Bearer ${token}`, // Añadir el token aquí
+        'Authorization': `Bearer ${token}`,
       },
     })
 
     if (response.ok) {
       setProducts(products.filter(p => p.id !== id))
+      showAlert('success', 'Producto eliminado exitosamente')
     } else {
-      console.error('Error al eliminar el producto:', response.statusText)
-      alert('No se pudo eliminar el producto. Verifica tu autenticación.')
+      showAlert('error', 'No se pudo eliminar el producto')
     }
   }
 
-
   return (
       <div className="min-h-screen bg-gray-900 text-gray-100 p-4">
+        {alert.show && (
+            <Alert
+                type={alert.type}
+                message={alert.message}
+                onClose={() => setAlert({ ...alert, show: false })}
+            />
+        )}
         <h1 className="text-3xl font-bold mb-6 text-center text-purple-400">Gestión de Productos</h1>
         <Tabs defaultValue="create" className="max-w-4xl mx-auto">
           <TabsList className="grid w-full grid-cols-5 mb-6">

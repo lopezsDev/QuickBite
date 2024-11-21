@@ -9,7 +9,7 @@ const nextConfig = {
             },
         ]
     },
-    // Aquí puedes agregar otras opciones de configuración si lo necesitas
+
 }
 
 module.exports = nextConfig;
