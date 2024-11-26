@@ -1,5 +1,6 @@
 package com.example.QuickBite.controller;
 
+import com.example.QuickBite.config.UserAlreadyExistsException;
 import com.example.QuickBite.dto.AuthenticationRequest;
 import com.example.QuickBite.dto.AuthenticationResponse;
 import com.example.QuickBite.dto.RegisterRequest;
@@ -21,10 +22,14 @@ public class AuthenticationController {
     private final AuthenticationService service;
 
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> register(
+    public ResponseEntity<?> register(
             @RequestBody RegisterRequest request
     ) {
-        return ResponseEntity.ok(service.register(request));
+        try {
+            return ResponseEntity.ok(service.register(request));
+        } catch (UserAlreadyExistsException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @PostMapping("/login")
@@ -33,11 +38,4 @@ public class AuthenticationController {
     ) {
         return ResponseEntity.ok(service.authenticate(request));
     }
-
-//    @PostMapping("/refresh-token")
-//    public ResponseEntity<AuthenticationResponse> refreshToken(@RequestBody Map<String, String> request) {
-//        String refreshToken = request.get("refreshToken");
-//        AuthenticationResponse response = service.refreshToken(refreshToken);
-//        return ResponseEntity.ok(response);
-//    }
 }
